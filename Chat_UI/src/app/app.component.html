@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col-2"></div>
+    <div class="col-8 border p-4 shadow mt-4">
+      <div class="p-2 text-light bg-dark mb-3">
+        <input type="text" name="username" [(ngModel)]="username" class="">
+      </div>
+      <div class="card" style="height: 25rem;overflow: auto;">
+        <p class="m-1 shadow-1 border p-1" *ngFor="let msg of messages">
+          <span class=" alert-primary rounded border">{{msg.username}}</span><br/>
+          {{msg.message}}
+        </p>
+      </div>
+      <form (submit)="onSubmit()" style="margin-top: 3rem;">
+        <label for="text">Write a message</label>
+        <input type="text" name="message" [(ngModel)]="message" class="form-control">
+      </form>
+    </div>
+
+  </div>
+</div>
